@@ -2,7 +2,8 @@
 CP1404/CP5632 Assignment 2 - Albums Archive console program.
 Name: Ding Zuotian
 Date: 26/7/2026
-GitHub: """
+GitHub: https://github.com/ZuotianDing/cp1404-a1-ZuotianDing.git
+"""
 
 import random
 from operator import attrgetter

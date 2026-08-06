@@ -2,7 +2,7 @@
 CP1404/CP5632 Assignment 2 - Albums Archive GUI.
 Name: Ding Zuotian
 Date: 26/7/2026
-GitHub: Add your Assignment 2 repository URL here.
+GitHub: https://github.com/ZuotianDing/cp1404-2026-2-a2-DingZuotian.git
 """
 
 from pathlib import Path
