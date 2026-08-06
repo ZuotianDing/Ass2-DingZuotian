@@ -1,1 +1,26 @@
-
+[
+    {
+        "title": "After the Music Stops",
+        "artist": "Lecrae",
+        "year": 2006,
+        "is_completed": false
+    },
+    {
+        "title": "Abbey Road",
+        "artist": "The Beatles",
+        "year": 1969,
+        "is_completed": true
+    },
+    {
+        "title": "The Dark Side of the Moon",
+        "artist": "Pink Floyd",
+        "year": 1973,
+        "is_completed": false
+    },
+    {
+        "title": "III Sides to Every Story",
+        "artist": "Extreme",
+        "year": 1992,
+        "is_completed": true
+    }
+]

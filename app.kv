@@ -1,1 +1,112 @@
+#:kivy 2.2.0
 
+BoxLayout:
+    orientation: "horizontal"
+    padding: 12
+    spacing: 12
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_x: 0.32
+        spacing: 8
+
+        Label:
+            text: "Sort albums"
+            size_hint_y: None
+            height: 30
+            halign: "left"
+            text_size: self.size
+            valign: "middle"
+
+        Spinner:
+            id: sort_spinner
+            text: "Completed"
+            values: app.sort_options
+            size_hint_y: None
+            height: 44
+            on_text: app.sort_albums(self.text)
+
+        Label:
+            text: "Add a new album"
+            size_hint_y: None
+            height: 36
+            halign: "left"
+            text_size: self.size
+            valign: "bottom"
+
+        TextInput:
+            id: title_input
+            hint_text: "Title"
+            multiline: False
+            write_tab: False
+            focus_next: artist_input
+            size_hint_y: None
+            height: 44
+
+        TextInput:
+            id: artist_input
+            hint_text: "Artist"
+            multiline: False
+            write_tab: False
+            focus_next: year_input
+            size_hint_y: None
+            height: 44
+
+        TextInput:
+            id: year_input
+            hint_text: "Year"
+            input_filter: None
+            multiline: False
+            write_tab: False
+            focus_next: title_input
+            size_hint_y: None
+            height: 44
+
+        BoxLayout:
+            size_hint_y: None
+            height: 46
+            spacing: 8
+
+            Button:
+                text: "Add Album"
+                on_release: app.add_album()
+
+            Button:
+                text: "Clear"
+                on_release: app.clear_fields()
+
+        Widget:
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_x: 0.68
+        spacing: 8
+
+        Label:
+            id: required_label
+            text: "Albums to listen to: 0"
+            size_hint_y: None
+            height: 36
+            font_size: 18
+            halign: "left"
+            text_size: self.size
+            valign: "middle"
+
+        ScrollView:
+            do_scroll_x: False
+
+            GridLayout:
+                id: album_container
+                cols: 1
+                spacing: 6
+                size_hint_y: None
+                height: self.minimum_height
+
+        Label:
+            id: message_label
+            text: ""
+            size_hint_y: None
+            height: 48
+            halign: "left"
+            text_size: self.size
+            valign: "middle"
